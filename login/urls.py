@@ -1,4 +1,4 @@
-from django.conf.urls import url
+from django.conf.urls import url,include
 from . import views
 
 # lxg lxg123456
@@ -14,5 +14,8 @@ urlpatterns = [
 
     # 登出
     url(r'^logout/', views.logout,name='logout'),
+
+    # 验证码
+    url(r'^captcha', include('captcha.urls'))
 
 ]
